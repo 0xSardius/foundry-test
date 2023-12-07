@@ -13,7 +13,7 @@ contract Calculator {
     }
 
     function decrement() public {
-        number--
+        number--;
     }
 
     function multiplyNumber(uint256 _multiplier) public {
