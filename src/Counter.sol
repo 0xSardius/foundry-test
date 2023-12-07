@@ -11,4 +11,16 @@ contract Counter {
     function increment() public {
         number++;
     }
+
+    function decrement() public {
+        number--
+    }
+
+    function multiplyNumber(uint256 _multiplier) public {
+        number = number * _multiplier;
+    }
+
+    function divideNumber(uint256 _divisor) public {
+        number = number / _divisor;
+    }
 }
