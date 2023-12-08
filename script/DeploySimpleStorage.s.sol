@@ -2,7 +2,15 @@
 
 pragma solidity 0.8.19;
 
-import "forge-std/Script.sol";
-import "../src/SimpleStorage.sol";
+import {Script} from "forge-std/Script.sol";
+import {SimpleStorage} from "../src/SimpleStorage.sol";
 
-contract DeploySimpleStorage is Script {}
+contract DeploySimpleStorage is Script {
+    function run() external returns (SimpleStorage) {
+        vm.startBroadcast();
+        // Sends a transaction to create a new simpleStorage contract
+        SimpleStorage simpleStorage = new SimpleStorage();
+        vm.stopBroadcast();
+        return simpleStorage;
+    }
+}
